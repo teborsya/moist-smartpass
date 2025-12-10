@@ -1,25 +1,27 @@
-# smartpass
+# SmartPass Project Task List
 
-Task Lists:
+### 1. Crontab Library (Turn Off / On Scheduler)
+- ✅ Implement and test automatic system shutdown and startup using `python-crontab`.
 
-1. Crontab Library (turn off/on scheduler)  
-   ✅ test auto on/off
+### 2. QR Code Scanner → API Communication
+- 🔲 Implement code to send scanned QR code data to a specific API endpoint.  
+- 🔲 Test POST requests for successful submission.
 
-2. QR code scanner then send obtained data to specific API endpoint  
+    **Subtasks:**  
+    - 🔲 2.1 No Internet Connection Detected  
+    - Add a status field `is_submitted` with choices `(True, False)`.  
+    - Store scanned QR code data locally for later submission.  
 
-   🔲 test a POST requests.  
+    - 🔲 2.2 Internet Connection Detected  
+    - Check all rows where `is_submitted = False`.  
+    - Submit stored data to the API endpoint.  
 
-        🔲 2.1 If no internet connection is detected:
-        - Add a status field named `is_submitted` with choices `(True, False)`
-        - Store the obtained data locally
+    - 🔲 Verify that a 200 OK response is received from the API.
 
-        🔲 2.2 If internet connection is detected:
-        - Check all rows where `is_submitted = False` and submit them to the API endpoint
+### 3. SMS Notification with SIM7600 Module
+- 🔲 Implement an SMS blasting system for students when they scan their QR code.  
+- 🔲 Enforce a rate limit: maximum 30 SMS per 5 minutes.
 
-   🔲 test if a 200 status response recieved.
-
-3. SMS notification with SIM7600 module  
-   🔲 limit 30 sms every 5 mins.
-
-4. Websockets (socket.io)  
-   🔲 emmiter to trigger server and RSP
+### 4. WebSockets (Socket.IO)
+- 🔲 Implement emitter to trigger the server.  
+- 🔲 Handle response from the server and process accordingly.
