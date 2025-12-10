@@ -4,7 +4,7 @@
 - ✅ Implement and test automatic system shutdown and startup using `python-crontab`.
 
 ### 2. QR Code Scanner → API Communication
-- 🔲 Implement code to send scanned QR code data to a specific API endpoint.  
+- ✅ Implement code to send scanned QR code data to a specific API endpoint.  
 - 🔲 Test POST requests for successful submission.
 
     **Subtasks:**  
