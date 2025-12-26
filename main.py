@@ -20,6 +20,8 @@ def index():
 
 def push_student_to_clients(student_data):
     scanned_students.append(student_data)
+    if len(scanned_students) > 5:
+        scanned_students[:] = scanned_students[-5:]
     socketio.emit('new_student', student_data)
 
 # --------------------------
