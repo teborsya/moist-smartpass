@@ -23,4 +23,4 @@
 - 🔲 Enforce a rate limit: maximum 30 SMS per 5 minutes.
 
 ### 4. WebSockets (Socket.IO)
-- 🔲 Implement emitter to trigger the server and RSP.  
+- ✅ Implement emitter to trigger the server and RSP.  
